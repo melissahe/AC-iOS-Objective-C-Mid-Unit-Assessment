@@ -6,6 +6,8 @@
 //  Copyright © 2018 Alex Paul. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @interface Crayon: NSObject
 
 @property (copy, nonatomic) NSString *name;
@@ -21,5 +23,6 @@
                        green:(double)green
                         blue:(double)blue
                          hex:(NSString *)hex;
+- (UIColor *)color;
 
 @end

@@ -44,4 +44,8 @@
     return self;
 }
 
+- (UIColor *)color {
+    return [[UIColor alloc] initWithRed:self.red/255 green:self.green/255 blue:self.blue/255 alpha:1];
+}
+
 @end
