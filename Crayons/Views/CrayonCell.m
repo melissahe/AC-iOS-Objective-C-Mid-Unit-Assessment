@@ -31,7 +31,7 @@
 
 - (void)commonInit {
     [self setupViews];
-    UIColor *crayonColor = [[UIColor alloc] initWithRed:self.crayon.red/255 green:self.crayon.green/255 blue:self.crayon.blue/255 alpha:1];
+    UIColor *crayonColor = [self.crayon color];
     self.contentView.backgroundColor = crayonColor;
 }
 

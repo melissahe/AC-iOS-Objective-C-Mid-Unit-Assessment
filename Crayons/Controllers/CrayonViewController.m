@@ -9,6 +9,7 @@
 #import "CrayonViewController.h"
 #import "Crayon.h"
 #import "CrayonCell.h"
+#import "CrayonDetailViewController.h"
 
 #define CELLID "crayonCell"
 
@@ -65,7 +66,9 @@
 #pragma mark - Table View Delegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //TODO: setup didselect and segue to detailed view controller
+    Crayon *currentCrayon = self.crayonArray[indexPath.row];
+    CrayonDetailViewController *crayonDetailVC = [[CrayonDetailViewController alloc] initWithCrayon: currentCrayon];
+    [self.navigationController pushViewController:crayonDetailVC animated:YES];
 }
 
 #pragma mark - Table View Data Source Methods
