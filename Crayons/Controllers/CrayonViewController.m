@@ -82,6 +82,9 @@
     CrayonCell *cell = [tableView dequeueReusableCellWithIdentifier:@CELLID forIndexPath:indexPath];
     Crayon *currentCrayon = self.crayonArray[indexPath.row];
     [cell configureCellWithCrayon:currentCrayon];
+    if ([currentCrayon.name isEqualToString:@"Black"]) {
+        [cell changeTextColorToWhite];
+    }
     return cell;
 }
 

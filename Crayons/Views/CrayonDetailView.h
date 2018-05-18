@@ -32,5 +32,6 @@
 @property (strong, nonatomic) UIButton *resetButton;
 
 - (instancetype)initWithCrayon:(Crayon *)crayon;
+- (void)changeTextColorToWhite;
 
 @end

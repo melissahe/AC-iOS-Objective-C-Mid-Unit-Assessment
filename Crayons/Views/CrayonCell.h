@@ -17,5 +17,6 @@
 @property (strong, nonatomic, readonly) Crayon *crayon;
 
 - (void)configureCellWithCrayon:(Crayon *)crayon;
+- (void)changeTextColorToWhite;
 
 @end

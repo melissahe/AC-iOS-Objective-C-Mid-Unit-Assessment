@@ -45,6 +45,18 @@
     [self setupResetButton];
 }
 
+- (void)changeTextColorToWhite {
+    self.redValueLabel.textColor = UIColor.whiteColor;
+    self.redSlider.backgroundColor = UIColor.whiteColor;
+    self.greenValueLabel.textColor = UIColor.whiteColor;
+    self.greenSlider.backgroundColor = UIColor.whiteColor;
+    self.blueValueLabel.textColor = UIColor.whiteColor;
+    self.blueSlider.backgroundColor = UIColor.whiteColor;
+    self.alphaValueLabel.textColor = UIColor.whiteColor;
+    self.alphaStepper.backgroundColor = UIColor.whiteColor;
+    self.resetButton.backgroundColor = UIColor.whiteColor;
+}
+
 //red
 - (void)setupRedValueLabel {
     if (!_redValueLabel) {

@@ -47,6 +47,11 @@
 }
 
 - (void)configureSubviews {
+    if ([self.crayon.name isEqualToString:@"Black"]) {
+        //change everything to white background
+        [self.crayonDetailView changeTextColorToWhite];
+    }
+    
     //sliders
     [self.crayonDetailView.redSlider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.crayonDetailView.greenSlider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];

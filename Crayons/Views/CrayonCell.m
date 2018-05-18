@@ -33,6 +33,12 @@
     self.contentView.backgroundColor = crayonColor;
 }
 
+- (void)changeTextColorToWhite {
+    self.crayonNameLabel.textColor = UIColor.whiteColor;
+    self.hexLabel.textColor = UIColor.whiteColor;
+    self.crayonImageView.backgroundColor = UIColor.whiteColor;
+}
+
 //constraints
 - (void)setupViews {
     [self setupCrayonImageView];
@@ -44,7 +50,7 @@
     if (!_crayonImageView) {
         _crayonImageView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"crayon"]];
     }
-    
+    self.crayonImageView.backgroundColor = UIColor.clearColor;
     self.crayonImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     [self.contentView addSubview: self.crayonImageView];
