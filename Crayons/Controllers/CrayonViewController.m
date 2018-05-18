@@ -8,6 +8,8 @@
 
 #import "CrayonViewController.h"
 #import "Crayon.h"
+#import "CrayonCell.h"
+
 #define CELLID "crayonCell"
 
 @interface CrayonViewController ()
@@ -23,7 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.grayColor;
+    self.view.backgroundColor = UIColor.whiteColor;
+    self.navigationItem.title = @"Crayons";
     [self allocInitSubviews];
     [self configureSubviews];
     [self addSubviews];
@@ -42,8 +45,7 @@
     self.crayonArray = Crayon.allTheCrayons;
     self.crayonTableView.rowHeight = UITableViewAutomaticDimension;
     self.crayonTableView.estimatedRowHeight = 200;
-    //TODO: register class after creating custom tableview class
-//    [self.crayonTableView registerClass:<#(nullable Class)#> forCellReuseIdentifier:@crayonCell];
+    [self.crayonTableView registerClass:CrayonCell.self forCellReuseIdentifier:@CELLID];
 }
 
 - (void)addSubviews {
@@ -74,7 +76,9 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     //TODO: add custom tableview cell
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@CELLID];
+    CrayonCell *cell = [tableView dequeueReusableCellWithIdentifier:@CELLID forIndexPath:indexPath];
+    Crayon *currentCrayon = self.crayonArray[indexPath.row];
+    [cell configureCellWithCrayon:currentCrayon];
     return cell;
 }
 

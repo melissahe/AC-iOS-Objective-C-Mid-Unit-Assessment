@@ -14,6 +14,7 @@
 		571A1ACF20AB5DCA00624059 /* CrayonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 571A1ACE20AB5DCA00624059 /* CrayonsTests.m */; };
 		571A1ADB20AB74DA00624059 /* Crayon.m in Sources */ = {isa = PBXBuildFile; fileRef = 571A1ADA20AB74DA00624059 /* Crayon.m */; };
 		57D486A820ADE9560052E870 /* CrayonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D486A720ADE9560052E870 /* CrayonViewController.m */; };
+		81CD372D20AF39C70049F760 /* CrayonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD372C20AF39C70049F760 /* CrayonCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		571A1ADA20AB74DA00624059 /* Crayon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Crayon.m; sourceTree = "<group>"; };
 		57D486A620ADE9560052E870 /* CrayonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrayonViewController.h; sourceTree = "<group>"; };
 		57D486A720ADE9560052E870 /* CrayonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrayonViewController.m; sourceTree = "<group>"; };
+		81CD372B20AF39C70049F760 /* CrayonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrayonCell.h; sourceTree = "<group>"; };
+		81CD372C20AF39C70049F760 /* CrayonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrayonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				57D486A920ADEB8A0052E870 /* Models */,
-				57D486AC20ADEBCB0052E870 /* Views */,
+				81CD372E20AF39CC0049F760 /* Views */,
 				57D486AA20ADEB990052E870 /* Controllers */,
 				57D486AB20ADEBAE0052E870 /* Supporting Files */,
 				571A1AC320AB5DCA00624059 /* Info.plist */,
@@ -130,9 +133,11 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		57D486AC20ADEBCB0052E870 /* Views */ = {
+		81CD372E20AF39CC0049F760 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81CD372B20AF39C70049F760 /* CrayonCell.h */,
+				81CD372C20AF39C70049F760 /* CrayonCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				571A1AC520AB5DCA00624059 /* main.m in Sources */,
+				81CD372D20AF39C70049F760 /* CrayonCell.m in Sources */,
 				571A1AB720AB5DC900624059 /* AppDelegate.m in Sources */,
 				57D486A820ADE9560052E870 /* CrayonViewController.m in Sources */,
 				571A1ADB20AB74DA00624059 /* Crayon.m in Sources */,
