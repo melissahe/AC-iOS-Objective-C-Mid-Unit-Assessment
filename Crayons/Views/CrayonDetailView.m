@@ -71,6 +71,7 @@
     if (!_redSlider) {
         _redSlider = [[UISlider alloc] initWithFrame:CGRectZero];
     }
+    self.redSlider.tag = 0;
     self.redSlider.minimumValue = 0;
     self.redSlider.maximumValue = 1;
     self.redSlider.value = self.crayon.red/255;
@@ -112,6 +113,7 @@
     if (!_greenSlider) {
         _greenSlider = [[UISlider alloc] initWithFrame:CGRectZero];
     }
+    self.greenSlider.tag = 1;
     self.greenSlider.minimumValue = 0;
     self.greenSlider.maximumValue = 1;
     self.greenSlider.value = self.crayon.green/255;
@@ -153,9 +155,10 @@
     if (!_blueSlider) {
         _blueSlider = [[UISlider alloc] initWithFrame:CGRectZero];
     }
+    self.blueSlider.tag = 2;
     self.blueSlider.minimumValue = 0;
     self.blueSlider.maximumValue = 1;
-    self.blueSlider.value = self.crayon.green/255;
+    self.blueSlider.value = self.crayon.blue/255;
     [self.blueSlider setContentCompressionResistancePriority:1000 forAxis:UILayoutConstraintAxisVertical];
     
     [self addSubview:self.blueSlider];

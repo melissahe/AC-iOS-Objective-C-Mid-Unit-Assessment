@@ -14,6 +14,7 @@
 @property (assign) double red;
 @property (assign) double green;
 @property (assign) double blue;
+@property (copy, nonatomic) NSArray *originalColors;
 @property (copy, nonatomic) NSString *hex;
 
 + (NSArray *)allTheCrayons;
@@ -23,6 +24,7 @@
                        green:(double)green
                         blue:(double)blue
                          hex:(NSString *)hex;
+- (UIColor *)colorWithAlpha:(double)alpha;
 - (UIColor *)color;
 
 @end

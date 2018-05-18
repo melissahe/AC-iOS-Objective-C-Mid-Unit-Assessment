@@ -23,9 +23,7 @@
 }
 
 - (void)configureCellWithCrayon:(Crayon *)crayon {
-    if (!_crayon) {
-        _crayon = crayon;
-    }
+    _crayon = crayon;
     [self commonInit];
 }
 

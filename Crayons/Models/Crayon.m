@@ -40,12 +40,18 @@
         _green = green;
         _blue = blue;
         _hex = hex;
+        _originalColors =
+        @[[NSNumber numberWithDouble:self.red], [NSNumber numberWithDouble:self.green], [NSNumber numberWithDouble:self.blue]];
     }
     return self;
 }
 
+- (UIColor *)colorWithAlpha:(double)alpha {
+    return [[UIColor alloc] initWithRed:self.red/255 green:self.green/255 blue:self.blue/255 alpha:alpha];
+}
+
 - (UIColor *)color {
-    return [[UIColor alloc] initWithRed:self.red/255 green:self.green/255 blue:self.blue/255 alpha:1];
+    return [self colorWithAlpha:1];
 }
 
 @end
